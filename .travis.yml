@@ -12,7 +12,7 @@ after_success:
   - docker build -t mkoujalgi96/multi-server ./server
   - docker build -t mkoujalgi96/multi-worker ./worker
   #login to docker hub
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password -stdin
   #push images to docker-hub
   - docker push mkoujalgi96/multi-client
   - docker push mkoujalgi96/multi-nginx
